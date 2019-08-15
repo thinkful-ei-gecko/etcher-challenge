@@ -1,3 +1,5 @@
+'use strict';
+
 // Add Event Listeners here:
 
 
