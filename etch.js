@@ -2,9 +2,14 @@
 
 // Add Event Listeners here:
 function onHoverCell() {
-  $('.cell').mouseenter(function(event) {
-    console.log(event);
+  $('.grid').on( 'mouseenter', '.cell', function(event) {
     $(event.currentTarget).addClass('active');
+  });
+}
+
+function clickClearGrid() {
+  $('button').on('click', (event) => {
+    createAndPlaceRows(8);
   });
 }
 
@@ -14,6 +19,7 @@ $(() => {
 
   // Bind your event listeners here:
   onHoverCell();
+  clickClearGrid();
 });
 
 
@@ -50,4 +56,5 @@ function createAndPlaceRows(n) {
   $('.grid').html(rows);
   const cells = $('.cell');
   cells.css({ height: cells.width() });
+  $
 }
