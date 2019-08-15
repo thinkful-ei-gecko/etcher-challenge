@@ -1,13 +1,19 @@
 'use strict';
 
 // Add Event Listeners here:
-
+function onHoverCell() {
+  $('.cell').mouseenter(function(event) {
+    console.log(event);
+    $(event.currentTarget).addClass('active');
+  });
+}
 
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
+  onHoverCell();
 });
 
 
